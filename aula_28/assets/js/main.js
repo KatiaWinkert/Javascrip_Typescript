@@ -1,25 +1,51 @@
-const h1 = document.querySelector('.container h1');
+const h1 = document.querySelector('.container h1')
 const data = new Date();
-h1.innerHTML = data.toString(dataCerta)
+
+//const opcoes = {
+//    dateStyle: 'full',
+//    timeStyle: 'short'
+//}; 
+
+h1.innerHTML = data.toLocaleString('pt-BR', {dateStyle: 'full', timeStyle: 'short'});
 
 
-//function zeroDataaEsqueda (num){
-//    return num >= 10 ? num : `0${num}`;
+//function getDiasSemanaTexto (diaSemana){
+//    let diaDaSemanatexto;
+//
+//    switch(diaSemana){
+//    case 0:
+//        diaDaSemanaTexto = 'Domingo';
+//        return diaDaSemanatexto;
+//            case 1:
+//        diaDaSemanaTexto = 'segunda';
+//        return diaDaSemanatexto;
+//            case 2:
+//        diaDaSemanaTexto = 'Terça';
+//        return diaDaSemanatexto;
+//            case 3:
+//        diaDaSemanaTexto = 'Quarta';
+//        return diaDaSemanatexto;
+//            case 4:
+//        diaDaSemanaTexto = 'Quinta';
+//        return diaDaSemanatexto;
+//            case 5:
+//        diaDaSemanaTexto = 'Sexta';
+//        return diaDaSemanatexto;
+//            case 6:
+//        diaDaSemanaTexto = 'Sabado';
+//        return diaDaSemanatexto;
 //}
 //
-//
-//function dataExec (data) {
-//
-//    const semana = zeroDataaEsqueda(data.getDay());
-//    const dia = zeroDataaEsqueda(data.getDate());
-//    const mes = zeroDataaEsqueda(data.getMonth());
-//    const ano = zeroDataaEsqueda(data.getFullYear());
-//    const hora = zeroDataaEsqueda(data.getHours());
-//    const min = zeroDataaEsqueda(data.getMinutes());
-//
-//    return`${semana}, ${dia} de ${mes} de ${ano} ${hora}:${min}`
 //}
+
+
+
+
+//let data = new Date();
 //
-//
-//const dataCerta = dataExec(data)
-//
+//let newData = data.toLocaleString('pt-BR', {
+//    dateStyle: 'full',
+//    timeStyle: 'full',
+//});
+//console.log(newData);
+//h1.innerHTML = getDiasSemanaTexto(data.getDay())
