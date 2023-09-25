@@ -2,7 +2,7 @@ const nome = ['Nino', 'Jheyni', 'Cindy', 'Manu'];
 
 //for classico - Geralmente com interaveis (array ou strings)
 //for in - Retorna indice ou chave de obj (string, array ou objeto)
-// for of - Retonca valore em sí (iteraveis, array ou strings)
+// for of - Retonca valore em sí (iteraveis, array ou strings   '''')
 
 
 //for (let i = 0 ; i < nome.length ; i++){
