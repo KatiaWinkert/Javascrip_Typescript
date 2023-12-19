@@ -59,3 +59,29 @@ form button:hover{
 .calculadora{
     width: 400px;
 }
+
+.display {
+    font-size: 2em;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    text-align: right;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1em;
+    border: none;
+    background: #dfdfdf;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #7c7a7a;
+}
+
+.btn-equa {
+    background: rgb(209, 225, 65);
+}
