@@ -17,6 +17,7 @@ function criaCalculadora() {
                 if(e.keyCode === 13){
                     this.realizaConta();
                 }
+                
             })
 
         },
