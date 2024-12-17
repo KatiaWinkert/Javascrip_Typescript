@@ -8,17 +8,23 @@ class Pessoa {
 
     //Metodos
     falar() {
-        console.log(`${this.nome} está falando.`);
+        console.log(`${this.nome} está falando`);
     } 
-    comer(){
-        console.log(`${this.nome} está comendo.`);
-    } 
-    beber() {
-        console.log(`${this.nome} está bebendo.`);
-    }
+   
+}
+
+function Pessoa2(nome, sobrenome){
+    this.nome = nome;
+    this.sobrenome = sobrenome; 
+
+}
+
+Pessoa2.prototype.falar = function() {
+    console.log(`${this.nome} está falando`);
+
 }
 
 //instaciar: a partir do momento que voce
 //instancia uma class voce cria um objeto. 
-const p1 = new Pessoa ('Katia', 'Winkert');
-console.log(p1)
+const p1 = new Pessoa('Katia', 'Winkert');
+const p2 = new Pessoa2('Dori', 'Aguiar');
