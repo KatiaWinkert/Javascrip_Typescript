@@ -14,15 +14,26 @@ class ValidaCPF{
              value: cpfenviado.replace(/\D+/g, ''),       
 
     });    
-
+  
     }
+
+ //metodo que inibe sequecia numerica 
+        ésequência () {
+         return this.cpflimpo.charAt(0).repeat(11) === this.cpflimpo;
+    } 
+
+
         geraNovoCpf(){
             const cpfSemDigitos = this.cpflimpo.slice(0, -2); 
-             const digito1 = this.geraDigito(cpfSemDigitos);
-              const digito2 =  this.geraDigito(cpfSemDigitos + digito1);
+             const digito1 = ValidaCPF.geraDigito(cpfSemDigitos);
+              const digito2 =  ValidaCPF.geraDigito(cpfSemDigitos + digito1);
+              this.novocpf = cpfSemDigitos + digito1 + digito2; 
             
     }
-        geraDigito () {
+
+//esse metodo pode se tornar estatico pois ele não utiliza nada da instacia, se você 
+//observar ele trabalha com base nos parametros, não utiliza o this.
+    static geraDigito (cpfSemDigitos) {
             let total = 0 ; 
              let reverso = cpfSemDigitos.length + 1 ; 
 
@@ -36,12 +47,9 @@ class ValidaCPF{
         
         }
 
-        //metodo que inibe sequecia numerica 
-        ésequência () {
-         return this.cpflimpo.charAt(0).repeat(11) === this.cpflimpo;
-    } 
+     
 
-    //metodo: 
+    //metodo principal: 
     valida() {
         //se algo for diferebte de cpf retorna falso
         //cpf diferente de string retorna falso
@@ -52,8 +60,9 @@ class ValidaCPF{
         if(this.cpflimpo.length !== 11) return false; 
         if(this.ésequência()) return false;
         this.geraNovoCpf()       
+        console.log(this.novocpf)
         
-        return 'Cheguei Aqui!';
+        return this.novocpf === this.cpflimpo;  
     }
 
 }
@@ -61,4 +70,10 @@ class ValidaCPF{
 
 //instacia: 
 const valida_cpf = new ValidaCPF('070.987.720-90');
-console.log(valida_cpf.valida)
+console.log(valida_cpf.valida())
+
+if(valida_cpf.valida()) {
+    console.log('CPF Válido');
+} else {
+    console.log('CPF Inválido');
+}
