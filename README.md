@@ -1,3 +1,3 @@
-# Cuso JavaScript e TypeScript 
+# Curso JavaScript e TypeScript 
 
 
