@@ -69,11 +69,11 @@ class ValidaCPF{
 
 
 //instacia: 
-const valida_cpf = new ValidaCPF('070.987.720-90');
-console.log(valida_cpf.valida())
+//const valida_cpf = new ValidaCPF('070.987.720-90');
+//console.log(valida_cpf.valida())
 
-if(valida_cpf.valida()) {
-    console.log('CPF Válido');
-} else {
-    console.log('CPF Inválido');
-}
+//if(valida_cpf.valida()) {
+ //   console.log('CPF Válido');
+//} else {
+  //  console.log('CPF Inválido');
+//}
