@@ -18,6 +18,12 @@ constructor() {
         const camposValido = this.camposSaoValidos();
         const senhaValida = this.senhasSãoValidas();
 
+        //validando envio de formulario
+        if(camposValido && senhaValida) {
+            alert ('Formulario enviado com sucesso!.')
+            this.formulario.submit();
+        }
+
     }
 
 
@@ -33,6 +39,11 @@ constructor() {
                 this.criaError(senha, 'Campos senha e repetir senha precisam ser iguais.');
                 this.criaError(repetirSenha, 'Campos senha e repetir senha precisam ser iguais.')
             }
+
+            if(senha.value.length < 6 || senha.value.length > 12) {
+                let valid = false;
+            this.criaError(senha, 'senha precisa ter entre 6 a 12 caracteres.')
+        }
 
         return valid;
     }
