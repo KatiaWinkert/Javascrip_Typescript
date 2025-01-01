@@ -45,7 +45,7 @@ function esperaAi (msg, tempo ) {
 //     console.log('fase');
 // }).catch(e => console.log(e))
 
-async function executa() {
+async function executar() {
 
     try{
     const fase1 = await esperaAi('fase 1', rand());
@@ -64,4 +64,5 @@ async function executa() {
 }
 
 }
-executa()
+
+executar()
