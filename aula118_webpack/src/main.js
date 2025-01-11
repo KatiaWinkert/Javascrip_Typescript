@@ -1,4 +1,4 @@
-import formGeraSenha from './modules/formGerasenha.js';
+import  formGeraSenha  from './modules/formGerasenha';
 
 import './assets/css/style.css';
 formGeraSenha();
