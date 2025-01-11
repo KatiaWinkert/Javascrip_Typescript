@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "aula_115_webpack",
   "version": "1.0.0",
   "description": "",
